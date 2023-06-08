@@ -7,7 +7,7 @@ Start by Forking this repo.
 1. In at least two sentences, how would you define what seed data is and why it's useful? (1 point possible)
 Seed data is what a developer might put into a database intitally to test if the database works as expected. It allows the work out any bugs or issues that may arise without worring about loosing important data. 
 1. Deleting a database column is a dangerous action, what might happen if you delete a column you didn't mean to? (1 point possible)
-the first thing that could happen is that you would loose all data inside of that column. depending on whether or not that column was a foreign or primary key it could also mess up relationships between tables. Lastly depending on were you delete the column it could cause the application and database to become out of sync.
+the first thing that could happen is that you would loose all data inside of that column. Depending on whether or not that column was a foreign or primary key it could also mess up relationships between tables. Lastly depending on were you delete the column it could cause the application and database to become out of sync.
 1. Write out at least 3 steps to describe the process of adding a new column to your database using entity framework. (1 point possible)
     First you will want to add a new property to the model you are trying to add the column to. After that's done you will want to navigate to the NuGet package manager console and add a migration with add-migration. Here you can enter in a name for the migration ideally the name of what you are adding. Lastly, you will want to run update-database to apply the newest snapshot to your database
     
