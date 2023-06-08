@@ -57,8 +57,7 @@ namespace BusTransitApp.Data
                 Route route2 = new Route{Fare = 1.25}
                 Stop stop1 = new Stop{name =" union station", Route = new List<Route> { route1 } };
                 Stop stop2 = new Stop{name = "Colfax", Route = new List<Route> { route2 } };
-                route1.Stop = new List<Stop> {stop1};
-                route2.Stop = new List<Stop> {stop2};
+
                 
                 Context.Add(route1);
                 Context.Add(route2);
