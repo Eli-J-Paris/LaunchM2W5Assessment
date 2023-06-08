@@ -5,7 +5,7 @@ Start by Forking this repo.
 ## Questions (10 Points Possible)
 
 1. In at least two sentences, how would you define what seed data is and why it's useful? (1 point possible)
-Seed data is what a developer might put into a database intitally to test if the database works as expected. It allows the work out any bugs or issues that may arise without worring about loosing important data. 
+Seed data is what a developer might put into a database intitally to test if the database works as expected. It allows the devleoper to work out any bugs or issues that may arise without worring about loosing important data. 
 1. Deleting a database column is a dangerous action, what might happen if you delete a column you didn't mean to? (1 point possible)
 the first thing that could happen is that you would loose all data inside of that column. Depending on whether or not that column was a foreign or primary key it could also mess up relationships between tables. Lastly depending on were you delete the column it could cause the application and database to become out of sync.
 1. Write out at least 3 steps to describe the process of adding a new column to your database using entity framework. (1 point possible)
