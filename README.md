@@ -26,7 +26,8 @@ namespace BusTransitApp
     {
         public class Route
         {
-            _____________________
+            public float Fare {get; set;}
+            public List<Stop> Stop {get; set;} = new();
         }
     }
 
@@ -34,7 +35,8 @@ namespace BusTransitApp
     {
         public class Stop
         {
-            _______________________
+            public string Name {get; set;}
+            public List<Route> Route {get; set;} = new();
         }
     }
 ```
@@ -49,9 +51,21 @@ namespace BusTransitApp.Data
     {
         public static void SeedRoutesAndStops(BusTransitContext context)
         {
-            if (______________)
+            if (true)
             {
-                ______________________________
+                Route route1 = new Route{Fare = 2.25}
+                Route route2 = new Route{Fare = 1.25}
+                Stop stop1 = new Stop{name =" union station", Route = new List<Route> { route1 } };
+                Stop stop2 = new Stop{name = "Colfax", Route = new List<Route> { route2 } };
+                route1.Stop = new List<Stop> {stop1};
+                route2.Stop = new List<Stop> {stop2};
+                
+                Context.Add(route1);
+                Context.Add(route2);
+                Context.Add(stop1);
+                Context.Add(stop2);
+                
+                Context.SaveChanges();
             }
         }
     }
